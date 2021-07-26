@@ -9,8 +9,8 @@ import userEvent from "@testing-library/user-event";
 import Toggle from "./toggle";
 
 describe("Button", () => {
-  describe("Showing content", () => {
-    test.skip("renders button and hidden content on click - getBy", () => {
+  describe("Renders button and hidden content on click", () => {
+    test.skip("SKIPPED: getBy", () => {
       render(<Toggle>Content</Toggle>);
 
       expect(screen.queryByText("Content")).toBeNull();
@@ -23,7 +23,7 @@ describe("Button", () => {
       expect(screen.getByRole("button", { name: "Hide" }));
     });
 
-    test("renders button and hidden content on click - findBy", async () => {
+    test("PREFERRED: findBy", async () => {
       render(<Toggle>Content</Toggle>);
 
       expect(screen.queryByText("Content")).toBeNull();
@@ -36,7 +36,7 @@ describe("Button", () => {
       expect(await screen.findByRole("button", { name: "Hide" }));
     });
 
-    test("renders button and hidden content on click - waitFor/getBy", async () => {
+    test("NOT RECOMMENDED: waitFor/getBy", async () => {
       render(<Toggle>Content</Toggle>);
 
       expect(screen.queryByText("Content")).toBeNull();
@@ -50,26 +50,10 @@ describe("Button", () => {
         expect(screen.getByRole("button", { name: "Hide" }));
       });
     });
-
-    xtest("demo test", async () => {
-      const mockFetch = jest.fn().mockResolvedValue("Content");
-      render(<Toggle onFetch={mockFetch} />);
-
-      expect(screen.getByRole("button", { name: "Show" }));
-
-      userEvent.click(screen.getByRole("button"));
-
-      await waitFor(() => expect(mockFetch).toHaveBeenCalled());
-      expect(await screen.findByText("Content"));
-
-      userEvent.click(screen.getByRole("button", { name: "Hide" }));
-
-      await waitForElementToBeRemoved(screen.queryByText("Content"));
-    });
   });
 
-  describe("Hiding content", () => {
-    test("renders content initially and hides on click - waitForElementToBeRemoved", async () => {
+  describe("Renders content initially and hides on click", () => {
+    test("waitForElementToBeRemoved", async () => {
       render(<Toggle open>Content</Toggle>);
 
       expect(screen.getByText("Content"));
@@ -81,7 +65,7 @@ describe("Button", () => {
       expect(await screen.findByRole("button", { name: "Show" }));
     });
 
-    test("renders content initially and hides on click - waitFor", async () => {
+    test("waitFor", async () => {
       render(<Toggle open>Content</Toggle>);
 
       expect(screen.getByText("Content"));

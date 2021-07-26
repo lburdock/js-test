@@ -1,25 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
-// xtest("exact match", () => {
-//   const {
-//     // Reference to the DOM node where the component is mounted
-//     container,
-
-//     // Function to rerender your component with new props
-//     rerender,
-
-//     // Function that will unmount your rendered component
-//     unmount,
-//   } = render(<Component />, {
-//     // Renders component with ReactDOM.hydrate
-//     hydrate: true,
-
-//     // Component that wraps the component you are testing
-//     wrapper: ({ children }) => <Layout>{children}</Layout>,
-//   });
-// });
-
 describe("Text match", () => {
   test("exact match", () => {
     render(<div>Hello World</div>);
@@ -34,14 +15,14 @@ describe("Text match", () => {
       screen.getByText("llo Worl");
     }).toThrow();
 
-    // Matching a regex:
+    // Matching a regex
     expect(screen.getByText(/world/i));
 
     // Include { exact: false } for partial matches
     expect(screen.getByText("llo Worl", { exact: false }));
     expect(screen.getByText("hello world", { exact: false }));
 
-    // Matching with a custom function:
+    // Matching with a custom function
     expect(
       screen.getByText(
         (content, element) =>

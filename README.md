@@ -20,3 +20,4 @@ This codebase provides examples of how to use Jest and React Testing Library.
 - [React testing library](https://testing-library.com/docs/react-testing-library/intro)
 - [React testing library - jest dom](https://github.com/testing-library/jest-dom)
 - [React testing library - user event](https://testing-library.com/docs/ecosystem-user-event)
+- [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
