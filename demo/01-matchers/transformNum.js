@@ -3,7 +3,6 @@
  * @param  {number} num Any number!
  */
 const transformNum = (num) => {
-  if (!num) return null;
   return {
     num: num * num,
     str: `Number: ${num.toString().repeat(num)}`,
