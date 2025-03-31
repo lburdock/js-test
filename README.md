@@ -1,23 +1,21 @@
-# JS Test Examples
+# React + Vite
 
-This codebase provides examples of how to use Jest and React Testing Library.
+This is the testing ground for creating the [JS test cheatsheet](https://neighborly-stoplight-336.notion.site/JS-test-1bab0052709a80638352e99e9a8b71ca). It uses [Vitest](https://vitest.dev/guide/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
 
-## Quick start
+### Setup
 
-1. **Clone the `js-test-examples` repo**.
+```sh
+npm install
+```
 
-1. **Run the tests:**
+Run locally
 
-   ```shell
-   cd js-test-examples
-   npm install
-   npm run test
-   ```
+```sh
+npm run dev
+```
 
-## Resources
+Test
 
-- [Jest](https://jestjs.io/docs/api)
-- [React testing library](https://testing-library.com/docs/react-testing-library/intro)
-- [React testing library - jest dom](https://github.com/testing-library/jest-dom)
-- [React testing library - user event](https://testing-library.com/docs/ecosystem-user-event)
-- [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
+```sh
+npm run test
+```

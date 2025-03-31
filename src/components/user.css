@@ -1,0 +1,32 @@
+.avatar {
+  align-items: center;
+  background-color: rgb(from var(--text) r g b / 15%);
+  border-radius: 50%;
+  color: rgb(from var(--text) r g b / 60%);
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 60px;
+  justify-content: center;
+  object-fit: cover;
+  width: 60px;
+}
+
+input[type="text"] {
+  padding: 6px 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+input[type="text"]:focus {
+  border-color: var(--text);
+}
+
+input[type="text"]:disabled {
+  border-color: transparent;
+  background: inherit;
+  color: inherit;
+}

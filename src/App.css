@@ -1,0 +1,62 @@
+:root {
+  --text: black;
+  --blue: blue;
+  --red: red;
+}
+
+#root {
+  padding: 2rem;
+}
+
+.gap-sm {
+  gap: 0.5rem;
+}
+
+.gap-md {
+  gap: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+button {
+  background-color: rgb(from var(--text) r g b / 10%);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  min-width: 4rem;
+  padding: 0.5em 1em;
+  text-align: center;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: rgb(from var(--text) r g b / 15%);
+}
+
+button.blue {
+  background-color: rgb(from var(--blue) r g b / 10%);
+  color: var(--blue);
+}
+
+button.blue:hover {
+  background-color: rgb(from var(--blue) r g b / 15%);
+}
+
+button.red {
+  background-color: rgb(from var(--red) r g b / 10%);
+  color: var(--red);
+}
+
+button.red:hover {
+  background-color: rgb(from var(--red) r g b / 15%);
+}
